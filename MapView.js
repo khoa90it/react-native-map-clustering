@@ -100,7 +100,7 @@ class MapView extends PureComponent {
         id={clusterId}
         cluster={cluster}
         onPress={(cluster)=>{
-          let child = this.superCluster.getChildren(cluster.properties.cluster_id)
+          let child = this.superCluster.getLeaves(cluster.properties.cluster_id, cluster.properties.point_count)
           this.props.onClusterPress({cluster,child})
         }}
       />
